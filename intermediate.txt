@@ -1,0 +1,59 @@
+2-1. What happens when you initialize a repository? Why do you need to do it?
+	Ans : When we initialize a repository, a .git directory is created
+		that contains the meta-data for all the files in the
+		repository. This meta-data is used by Git
+	      We need to initialize a repository to tell Git, which set of
+	      files or directories we want it to keep track of
+
+2-2. How is the staging area different from the working directory and the
+   repository? What value do you think it offers?
+	Ans : Staging area contains all the files from the working directory
+		that we want to be added to the repository.
+		We can use this as a temporary location before actually adding
+		the new files to the repository
+
+		I am really not sure what value the staging area offers
+
+2-3. How can you use the staging area to make sure you have one commit per
+   logical change?
+   	Ans : git commit copies the changes from staging area to the 
+	      repository. After completing all the changes, one can move only
+	      the files that are part of a logical change to the staging area
+	      and then commit them. After this, they can then add another set
+	      of files that belong to another logical change to the staging
+	      area. 
+
+	      This way, we can keep adding logical changes to the staging area
+	      and then go ahead and commit them all together into a single
+	      commit
+
+
+2-4. What are some situations when branches would be helpful in keeping your 
+   history organized? How would branches help?
+   	Ans : Branches would be helpful when we want to do some experiemental
+		changes that we do not want to be part of our main line of code
+		
+		Branches would help in this scenario, since changes done in the
+		branch do not affect any other branch including the master
+
+
+2-5. How do the diagrams help you visualize the branch structure?
+	Ans : Diagrams show the exact points where each branch diverges
+		It also shows us any unreachable commits
+
+
+2-6. What is the result of merging two branches together? Why do we represent it
+   in the diagram the way we do?
+   	Ans : When we merge two branches, the changes from one branch are 
+	      introduced into the other branch.
+
+	      It is to depict this fact, that we show the merged object
+	      pointing to two parents
+
+
+2-7. What are the pros and cons of Git’s automatic merging vs. always doing 
+   merges manually?
+	Ans : Pros : Saves time while merging trivial differences
+	      Cons : Takes more time to learn the new syntax of how Git
+	      		represents conflicts
+
